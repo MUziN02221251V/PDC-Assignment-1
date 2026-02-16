@@ -101,7 +101,7 @@ public class Master {
             taskQueue.offer(task);
         }
         
-        return data; 
+        return null; 
     }
 
     /**
@@ -142,7 +142,6 @@ public class Master {
                 try {
                     Thread.sleep(5000); // Check every 5 seconds
                     
-                    long now = System.currentTimeMillis();
                     List<WorkerConnection> failedWorkers = new ArrayList<>();
                     
                     // Check each worker's heartbeat
